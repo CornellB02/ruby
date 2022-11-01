@@ -9,15 +9,14 @@
 #     puts "it is zero"
 # end 
 
-n = 8 
+n = 8
 
 if n  > 0
     puts "yup"
-end
-
-if n  % 2 == 0
+elsif n  % 2 == 0
     puts "yeven"
 end
 
 
 
+# else or els makes conditions exlcusive 
