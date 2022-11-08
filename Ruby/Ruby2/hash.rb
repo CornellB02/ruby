@@ -1,10 +1,16 @@
-myHash = {
-    "name" => "App Academy" ,
-     'color' => 'red' ,
-      'age' => [5],
-       'isAwsome' => true,
-        42 => "hello"
-    }
+# def getDoub(hash)
+#     return hash['age'] * 2
+# end
+
+# myHash = {
+#     "name" => "App Academy" ,
+#      'color' => 'red' ,
+#       'age' => 5,
+#        'isAwsome' => true,
+#         42 => "hello"
+#     }
+
+# p getDoub(myHash)
 
 # `key => value ` pairs
 
@@ -43,24 +49,49 @@ myHash = {
 # puts my_stash[key]
 
 
-def bubbleSort(array)
-    sorted = false 
-    while (!sorted)
+# def bubbleSort(array)
+#     sorted = false 
+#     while (!sorted)
 
-        sorted = true 
-        while i = 0
-            array.each do |num|
-                if (num > array[i + 1])
-                    [num, array[i + 1]] = [array[i+1],num]
-                    sorted = false 
-                    i += 1
-                end
-            end
+#         sorted = true 
+#         while i = 0
+#             array.each do |num|
+#                 if (num > array[i + 1])
+#                     [num, array[i + 1]] = [array[i+1],num]
+#                     sorted = false 
+#                     i += 1
+#                 end
+#             end
+#         end
+#     end
+#     return array
+# end
+
+# arra = [3,87,2,44,323]
+
+# puts bubbleSort(arra)
+
+# str = "mississippi river"
+# count = Hash.new(0)
+
+# str.each_char do |char|
+#     count[char] += 1
+    
+# end
+# puts count
+
+# print count.sort_by { |k,v| v}
+
+def vowel_counts(str)
+    count = Hash.new(0)
+    vowels = "aeiou"
+    
+    str.each_char do |char|
+        if vowels.downcase.include?(char.downcase)
+        count[char] += 1
         end
     end
-    return array
+    return count
 end
 
-arra = [3,87,2,44,323]
-
-puts bubbleSort(arra)
+p vowel_counts("amaoAonneeyIya")
