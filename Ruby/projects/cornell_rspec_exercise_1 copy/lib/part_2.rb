@@ -11,28 +11,53 @@
 #     end
 #     return word
 # end
+
 def hipsterfy(word)
     vowels = "aeiou"
-    word.reverse.each_char.with_index do |char, i|
+
+    i = word.length - 1
+    while i >= 0
         if vowels.include?(word[i])
-            word.reverse!.slice!(i)
-            return word.reverse!
+            return word[0...i] + word[i+1..word.length]
         end
+        i -= 1
     end
-    return word
+    word
 end
+# def hipsterfy(word)
+#     vowels = "aeiou"
+#     word.reverse.each_char.with_index do |char, i|
+#         if vowels.include?(word[i])
+#             word.reverse!.slice!(i)
+#             return word.reverse!
+#         end
+#     end
+#     return word
+# end
 
 def vowel_counts(str)
     count = Hash.new(0)
     vowels = "aeiou"
-    
+
     str.each_char do |char|
-        if vowels.downcase.include?(char.downcase)
-        count[char.downcase] += 1
+        if vowels.include?(char.downcase)
+            count[char.downcase] += 1
         end
     end
-    return count
+    count
 end
+
+# def vowel_counts(str)
+#     count = Hash.new(0)
+#     vowels = "aeiou"
+    
+#     str.each_char do |char|
+#         if vowels.downcase.include?(char.downcase)
+#         count[char.downcase] += 1
+#         end
+#     end
+#     return count
+# end
 
 def caesar_cipher(message, n)
     alpha = ('a'..'z').to_a.join("")
