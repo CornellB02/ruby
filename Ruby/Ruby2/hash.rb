@@ -94,4 +94,4 @@ def vowel_counts(str)
     return count
 end
 
-p vowel_counts("amaoAonneeyIya")
+# p vowel_counts("amaoAonneeyIya")
