@@ -18,7 +18,8 @@ def char_replace!(str, hash)
 end
 
 def product_inject(array)
-    array.inject {|acc, num| acc * num }
+    # array.inject {|acc, num| acc * num }
+    arr.inject(&:*)
 end
 
 
