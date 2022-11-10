@@ -12,18 +12,20 @@
 #     return word
 # end
 
-def hipsterfy(word)
-    vowels = "aeiou"
 
-    i = word.length - 1
-    while i >= 0
-        if vowels.include?(word[i])
-            return word[0...i] + word[i+1..word.length]
-        end
-        i -= 1
-    end
-    word
-end
+
+# def hipsterfy(word)
+#     vowels = "aeiou"
+
+#     i = word.length - 1
+#     while i >= 0
+#         if vowels.include?(word[i])
+#             return word[0...i] + word[i+1..word.length]
+#         end
+#         i -= 1
+#     end
+#     word
+# end
 # def hipsterfy(word)
 #     vowels = "aeiou"
 #     word.reverse.each_char.with_index do |char, i|
@@ -75,3 +77,20 @@ def caesar_cipher(message, n)
     end
 
 end
+
+
+def hipsterfy(word)
+    vowels = "aeiou"
+
+    i = word.length - 1
+    while i >= 0
+        char = word[i]
+        if vowels.include?(char)
+            return word.slice(0,i) + word.slice(i+1,word.length)
+        end
+        i += 1
+    end
+    return word
+end
+
+p hipsterfy("hello")

@@ -7,6 +7,8 @@ def my_map(array, &block)
     return newArr
 end
 
+p ([money, love, hun, work], )
+
 def my_select(array, &block)
 
     newArr = []
