@@ -7,7 +7,7 @@ end
 
 # p partition([11, 5, 13, 2, 3], 7)
 
-def merge(hash1, hash2)
+def merge(hash1, hash2) #***********
     reshash = Hash.new
 
     hash1.each {|k, v| reshash[k] = v}
@@ -50,7 +50,7 @@ end
 
 # p censor("Gosh darn it", ["gosh", "darn", "shoot"])
 
-def power_of_two?(n)
+def power_of_two?(n)  #****************
     if n < 1
         return false
     elsif n == 1

@@ -17,4 +17,11 @@ def hash_select(hash, &blk)
     return reshash
 end
 
-def xor
+def xor_select(array, proc1, proc2)
+    array.select {|ele| proc1.call(ele) && !proc2.call(ele) || !proc1.call(ele) && proc2.call(ele) }
+end
+
+def proc_count(value, array)
+    array.count{|proc| proc.call(value)}
+end
+

@@ -9,7 +9,7 @@ def is_prime?(num)
     return true 
 end
 
-def nth_prime(n)
+def nth_prime(n)  #*******
     count = 0
     i = 2
     while true 
