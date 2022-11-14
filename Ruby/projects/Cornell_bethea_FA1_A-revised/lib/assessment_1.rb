@@ -66,8 +66,21 @@ end
 
 # print vowelrm("follow the yellow brick road")
 
-def char_counter(string, *arg)
-    reshash = {}
-    
+def char_counter(str, *arg)
+    if arg.length <= 0
+      char_count = Hash.new(0)
+      str.split('').each {|el| char_count[el] += 1}
+      return count
+    end
+  count = Hash.new
+  arg.each { |el| count[el] = 0}
+  
+  str.split("").each do |el|
+  if arg.include?(el)
+    count[el] += 1
+  end
+  end
+  count 
+  end
 
-end
+p char_counter('mississippi', 'm', 'i')
