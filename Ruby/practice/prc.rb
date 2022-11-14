@@ -83,7 +83,7 @@ end
 
 p abbreviate("follow the yellow brick road")
 p abbreviate("try to stay awake please")
-p abbreviate("STOP THat RSCKET NOW")
+p abbreviate("STOP THat RACKET NOW")
 
 
 def hash_selector(hash, *eles)
